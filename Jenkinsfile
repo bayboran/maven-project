@@ -13,7 +13,7 @@ pipeline {
 				//artifactlar arşivlenior.
         		success{
         			echo 'Arşivliyor'
-        			archiveArtifacs artifacts: '**/target/*.war'
+        			archiveArtifacts artifacts: '**/target/*.war'
         		}
         	}
 		}
