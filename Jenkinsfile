@@ -4,7 +4,7 @@ pipeline {
         stage('Build'){
 			// önceki atifactleri temizler kurulum paketini oluşturur.
             steps {
-				checkout scm
+				checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/bayboran/maven-project.git']]])
                 sh 'mvn clean package'            
 			}
         	
