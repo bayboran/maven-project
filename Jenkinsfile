@@ -4,10 +4,8 @@ pipeline {
         stage('Build'){
 			// önceki atifactleri temizler kurulum paketini oluşturur.
             steps {
-				checkout scm
-                sh 'mvn clean package'            
-			}
-        	
+                sh 'mvn clean package'            }
+        	}
         	post {
 				//artifactlar arşivlenior.
         		success{
