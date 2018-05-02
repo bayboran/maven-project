@@ -4,7 +4,7 @@ pipeline {
         stage('Build'){
 			// önceki atifactleri temizler kurulum paketini oluşturur.
             steps {
-                sh 'mvn clean package'            }
+                sh 'mvn clean package'            
         	}
         	post {
 				//artifactlar arşivlenior.
@@ -13,7 +13,7 @@ pipeline {
         			archiveArtifacs artifacts: '**/target/*.war'
         		}
         	}
-
+		}
         stage('Deploy Staging'){
 			//staging (test) alanına deploy işlemini gerçekleştirir.
             steps{
