@@ -1,5 +1,8 @@
 pipeline {
     agent any
+	tools{
+		maven 'M3'
+	}
     stages{
         stage('Build'){
 			// önceki atifactleri temizler kurulum paketini oluşturur.
